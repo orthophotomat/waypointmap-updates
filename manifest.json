@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "WayPointMap Premium",
-  "version": "2.0",
+  "version": "3.0",
   "description": "Way Point Map Premium Features by OrthophotoMat by Drone Media",
   "permissions": [
     "storage",
