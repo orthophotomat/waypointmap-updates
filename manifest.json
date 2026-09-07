@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "WayPointMap Premium",
+  "version": "2.0",
+  "description": "Way Point Map Premium Features by OrthophotoMat by Drone Media",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*" 
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.waypointmap.com/Home/Editor"],
+      "js": ["content_script.js"],
+      "css": ["preloader.css"],
+      "run_at": "document_start"
+    }
+  ],
+  "icons": {
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  }
+}
